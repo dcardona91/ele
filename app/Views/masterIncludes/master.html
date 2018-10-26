@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<!-- begin::Head -->
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {{ title }} | ele Framework
+    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Site made with ele famework">
+    {% include 'masterIncludes/styles/masterStyles.html'%}
+    {% block custom_styles %}
+    {% endblock %}
+    <link rel="shortcut icon" href="/favicon.ico" />
+</head>
+<body>
+    <div>
+        <!-- BEGIN: Header -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Menu item</a></li>
+                    <li><a href="/">Menu item</a></li>
+                    <li><a href="/">Menu item</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+             {% block main_content %}{% endblock %}
+        </div>      
+    {% include 'masterIncludes/scripts/masterScripts.html' %}
+    {% block custom_scripts %}
+
+    {% endblock %}   
+</body>
+<!-- end::Body -->
+
+</html>
